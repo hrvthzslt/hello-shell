@@ -58,7 +58,7 @@ echo $0
 
 ---
 
--> Terminológiák: Terminal Emulátor <-
+-> Terminológiák: Terminál Emulátor <-
 
 # Mi az a terminál?
 
@@ -82,7 +82,7 @@ terminál emulátorban.
 
 ---
 
--> Navigáció, manipuláció: Hol? <-
+-> Navigáció, manipuláció: Helyünk <-
 
 # Munkakönyvtár kiíratása
 
@@ -106,7 +106,7 @@ Options:
 
 ---
 
--> Navigáció, manipuláció: Hova? <-
+-> Navigáció, manipuláció: Szomszédok <-
 
 # Munkakönyvtár megváltoztatása
 
@@ -243,16 +243,14 @@ whereis ls
 
 `\/bin` - Azokat a futtatható programokat tartalmazza amik
 szükségesek a rendszernek.
-`\/sbin` - Szintén, rendszeradminisztrátorok részére.
 
 `\/usr\/bin` - Elsődleges mappa a futtatható programok
 részére. `whereis curl`
-`\/usr\/sbin` - Szintén, rendszeradminisztrátorok részére.
 
 `\/usr\/local\/bin` - Futtatható programok melyeket nem egy
 csomagkezelő segítségével telepítettünk. `whereis cht.sh`
-`\/usr\/local\/sbin` - Szintén, rendszeradminisztrátorok
-részére.
+
+`sbin` - Rendszergazda parancsai.
 
 ---
 
