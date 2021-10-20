@@ -465,7 +465,7 @@ sudo apt install cmatrix
 
 ---
 
--> Operátorok 1. <-
+-> Parancsok összefűzése: Operátorok 1. <-
 
 # ;
 
@@ -493,7 +493,7 @@ cat workspace/ || echo ":("
 
 ---
 
--> Operátorok 2. <-
+-> Parancsok összefűzése: Operátorok 2. <-
 
 # &
 
@@ -508,20 +508,32 @@ sleep 5 & echo "Sleeping"
 Parancs az előző kimenetének felhasználásával fut.
 
 ```
-ls -lah | grep work*
+ls -lah | grep work
 ```
+
+---
+
+-> Parancsok összefűzése: Kiement fájlba írása <-
 
 # >
 
 Parancs eredményének fájlba írása.
 
 ```
-ls -lah | grep work* > folders.txt
+ls -lah | grep work > folders.txt
+```
+
+# >>
+
+Parancs eredményének fájlba írása új sorként.
+
+```
+date >> datelog.txt
 ```
 
 ---
 
--> "Csővezeték" <-
+-> Parancsok összefűzése: "Csővezeték" <-
 
 Példamondat
 > The quick brown fox jumps over the lazy dog
