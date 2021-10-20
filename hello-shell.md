@@ -82,7 +82,7 @@ terminál emulátorban.
 
 ---
 
--> Navigáció, manipuláció: Helyünk <-
+-> Navigáció, manipuláció: Munkakönyvtár <-
 
 # Munkakönyvtár kiíratása
 
@@ -106,7 +106,7 @@ Options:
 
 ---
 
--> Navigáció, manipuláció: Szomszédok <-
+-> Navigáció, manipuláció: Munkakönyvtár <-
 
 # Munkakönyvtár megváltoztatása
 
@@ -118,7 +118,7 @@ cd .; cd ..; cd ../.; cd ../..; cd; cd /;
 
 ---
 
--> Navigáció, manipuláció: Teremtés <-
+-> Navigáció, manipuláció: Fájlok, könyvtárak <-
 
 # Fájlok, könyvtárak létrehozása
 
@@ -145,7 +145,7 @@ directories as needed"
 
 ---
 
--> Navigáció, manipuláció: Copy, move <-
+-> Navigáció, manipuláció: Fájlok, könyvtárak <-
 
 # Fájlok, könyvtárak másolása
 
@@ -171,7 +171,7 @@ mv file changedfilename
 
 ---
 
--> Navigáció, manipuláció: Pusztítás <-
+-> Navigáció, manipuláció: Fájlok, könyvtárak <-
 
 # Fájlok, könyvtárak törlése
 
@@ -517,7 +517,7 @@ ls -lah | grep work* > folders.txt
 
 ---
 
--> Csővezeték <-
+-> "Csővezeték" <-
 
 Példamondat
 > The quick brown fox jumps over the lazy dog
@@ -540,17 +540,5 @@ cat brown-fox.txt |
 ```
 cat alphabet.txt
 ```
-
----
-
--> Bónusz <-
-
-```
-grep -o -i manipuláció hello-shell.md | wc -l
-```
-
----
-
--> Köszönöm a figyelmet! <-
 
 ---
