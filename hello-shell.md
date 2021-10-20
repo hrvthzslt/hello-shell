@@ -30,11 +30,15 @@ egy parancssor az interfész.
 
 # Hol van a shell?
 
-UTILITIES - SHELL - KERNEL - HARDWARE
-              |
-             CLI
-              |
-            HUMAN
+┌───────────────┐
+│   UTILITIES   │
+│ ┌───────────┐ │ ┌───┐  ┌─────┐
+│ │   SHELL   │←┼─┤CLI│←─┤HUMAN│
+│ │ ┌────────┐│ │ └───┘  └─────┘
+│ │ │ KERNEL ││ │
+│ │ └────────┘│ │
+│ └───────────┘ │
+└───────────────┘
 
 # Mi történik most?
 
