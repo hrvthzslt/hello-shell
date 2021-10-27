@@ -10,7 +10,7 @@
 * Kipróbáljuk a shell-t mint munkakörnyezet.
 
 # Miről nem lesz szó?
-* UNIX rendszer mély megismeréséről.
+* Konkrét Linux disztró mély megismeréséről.
 * Komplikált shell szkriptelésről.
 * Szerver üzemeltetésről.
 
@@ -86,6 +86,15 @@ terminál emulátorban.
 
 ---
 
+-> Navigáció, manipuláció: Billentyűparancsok  <-
+
+- `Fel, le` - Előző parancsok közötti lépkedés.
+- `Tab` - Begépelt parancs fájlnév kiegészítése.
+- `Ctrl+L` - Képernyő törlése.
+- `Ctrl+R` - "Reverse search".
+
+---
+
 -> Navigáció, manipuláció: Munkakönyvtár <-
 
 # Munkakönyvtár kiíratása
@@ -129,7 +138,7 @@ cd .; cd ..; cd ../.; cd ../..; cd; cd /;
 __touch__ - "Change file timestamps."
 
 ```
-touch file
+touch file.txt
 ```
 
 Vagy létrehozhatunk szövegszerkesztővel is mint pl a `nano`.
@@ -137,7 +146,7 @@ Vagy létrehozhatunk szövegszerkesztővel is mint pl a `nano`.
 __mkdir__ - "Make directories."
 
 ```
-mkdir folder; mkdir -p folder/another/nice/folder
+mkdir folder; mkdir -p folder/archived/texts
 ```
 
 Options:
@@ -157,9 +166,9 @@ __cp__ - "Copy SOURCE to DEST, or multiple SOURCE(s) to
 DIRECTORY."
 
 ```
-cp file folder/another/nice/folder/
-cp file folder/another/nice/folder/changedfilename
-cp file changedfilename
+cp file.txt file1.txt
+cp file.txt folder/
+cp file.txt folder/changedfilename.txt
 ```
 
 # Fájlok, könyvtárak mozgatása
@@ -168,9 +177,9 @@ __mv__ - "Rename SOURCE to DEST, or move SOURCE(s) to
 DIRECTORY"
 
 ```
-mv file folder/another/nice/folder/
-mv file folder/another/nice/folder/changedfilename
-mv file changedfilename
+mv file.txt file1.txt
+mv file.txt folder/
+mv file.txt folder/changedfilename.txt
 ```
 
 ---
@@ -182,7 +191,7 @@ mv file changedfilename
 __rm__ - "Remove the FILE(s)."
 
 ```
-rm file; rm -r folder/with/files; rm file*
+rm file.txt; rm -r folder/archived/; rm file*
 ```
 
 Options:
@@ -205,7 +214,7 @@ recursively"
 `man` - "An interface to the system reference manuals"
 
 ```
-man ls
+man curl
 ```
 
 # Apropos
@@ -213,7 +222,7 @@ man ls
 `apropos` - "Search the manual page names and descriptions."
 
 ```
-apropos list
+apropos url
 ```
 
 # Tldr
@@ -222,7 +231,7 @@ apropos list
 from the tldr-pages project."
 
 ```
-tldr ls
+tldr curl
 ```
 
 # Cheat.sh
@@ -267,7 +276,7 @@ csomagkezelő segítségével telepítettünk. `whereis cht.sh`
 `\/lib` - Osztott rendszerkönyvtárak, kernel modulok.
 
 `\/dev` - Csatlakozott, csatolható különleges állományok pl.
-particiók, eszközök.
+partíciók, eszközök.
 
 `\/etc` - Beállításfájlok, jelszavak, hálózati-beállítások,
 etc.
@@ -314,13 +323,7 @@ a sudo csoport tagjai vagyunk.
 # Felhasználó teremtése
 
 ```
-sudo adduser newuser
-```
-
-# Felhasználó pusztítása
-
-```
-sudo deluser --remove-home newuser
+sudo adduser frank
 ```
 
 ---
@@ -359,8 +362,6 @@ groups hrvthzslt
 # Új felhasználó superuserré tétele
 
 ```
-sudo adduser frank
-sudo cat /etc/passwd
 sudo usermod -aG sudo frank
 groups frank
 ```
@@ -370,6 +371,12 @@ groups frank
 ```
 sudo login frank
 exit
+```
+
+# Felhasználó pusztítása
+
+```
+sudo deluser --remove-home frank
 ```
 
 ---
@@ -418,13 +425,13 @@ chmod 755 workspace/
 # Tulajdonos megváltoztatása
 
 ```
-sudo chown frank workspace/sandbox/
+sudo chown frodo workspace/sandbox/
 ```
 
 # Tulajdonos csoport megváltoztatása
 
 ```
-chgrp frank workspace/sandbox/
+sudo chgrp frodo workspace/sandbox/
 ```
 
 # Állomány futtathatóvá tétele
@@ -442,8 +449,6 @@ chmod +x script.sh
 - APT (Advanced Packaging Tool) - Debian, Ubuntu, Mint
 - RPM (Red Hat Package Manager) - RedHat
 - Pacman - Arch
-
-Különböző disztro, különböző repo.
 
 # Csomagok keresése
 
@@ -513,14 +518,14 @@ ls -lah | grep work
 
 ---
 
--> Parancsok összefűzése: Kiement fájlba írása <-
+-> Parancsok összefűzése: Kimenet fájlba írása <-
 
 # >
 
 Parancs eredményének fájlba írása.
 
 ```
-ls -lah | grep work > folders.txt
+date | tr " " "-" > datelog.txt
 ```
 
 # >>
@@ -528,7 +533,7 @@ ls -lah | grep work > folders.txt
 Parancs eredményének fájlba írása új sorként.
 
 ```
-date >> datelog.txt
+date | tr " " "-" >> datelog.txt
 ```
 
 ---
