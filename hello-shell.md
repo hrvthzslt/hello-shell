@@ -92,6 +92,7 @@ terminál emulátorban.
 - `Tab` - Begépelt parancs fájlnév kiegészítése.
 - `Ctrl+L` - Képernyő törlése.
 - `Ctrl+R` - "Reverse search".
+- `Ctrl+C` - "Abort".
 
 ---
 
